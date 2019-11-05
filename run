@@ -1,0 +1,5 @@
+#!/bin/bash
+
+packr
+
+go run server.go

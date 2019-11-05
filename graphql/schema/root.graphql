@@ -1,0 +1,19 @@
+scalar DateTime
+
+schema {
+    query: Query
+    subscription: Subscription
+    mutation: Mutation
+}
+
+type Query {
+    getUser(id: String!): User
+}
+
+type Subscription {
+    users: User!
+}
+
+type Mutation {
+    createUser(name: String!, email: String): User!
+}
