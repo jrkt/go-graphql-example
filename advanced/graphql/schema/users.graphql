@@ -1,0 +1,11 @@
+type User {
+    # db resolvers
+    id: String!
+    firstName: String!
+    lastName: String!
+    email: String
+    createdAt: DateTime!
+
+    # other resolvers
+    fullName: String!
+}

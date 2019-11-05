@@ -1,5 +1,7 @@
 package resolvers
 
+type RootResolver struct {}
+
 type resolvers struct {
 	*userResolver
 }

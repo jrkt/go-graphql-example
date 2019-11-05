@@ -9,7 +9,7 @@ import (
 func InitHandler() (http.Handler, error) {
 	schema, err := Compile()
 	if err != nil {
-		return nil, nil
+		return nil, err
 	}
 
 	return graphqlws.NewHandlerFunc(schema, &relay.Handler{Schema: schema}), nil

@@ -2,7 +2,7 @@ package resolvers
 
 import (
 	"context"
-	"github.com/jrkt/go-graphql-example/db"
+	"github.com/jrkt/go-graphql-example/advanced/db"
 	"math/rand"
 	"time"
 )
@@ -28,10 +28,11 @@ func (r *userResolver) GetUser(ctx context.Context, args struct{ Id string }) (*
 }
 
 func (r *userResolver) CreateUser(args struct {
-	Name  string
+	FirstName  string
+	LastName  string
 	Email *string
 }) *db.User {
-	u := db.NewUser(args.Name, args.Email)
+	u := db.NewUser(args.FirstName, args.LastName, args.Email)
 
 	go func() {
 		select {

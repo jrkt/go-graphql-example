@@ -4,7 +4,7 @@ import (
 	"github.com/gobuffalo/packd"
 	"github.com/gobuffalo/packr"
 	"github.com/graph-gophers/graphql-go"
-	"github.com/jrkt/go-graphql-example/graphql/resolvers"
+	"github.com/jrkt/go-graphql-example/advanced/graphql/resolvers"
 	"strings"
 )
 
@@ -13,7 +13,7 @@ var (
 )
 
 func init() {
-	SchemaBox = packr.NewBox("./schema/")
+	SchemaBox = packr.NewBox("./schema")
 }
 
 func Compile() (*graphql.Schema, error) {
@@ -32,6 +32,7 @@ func Compile() (*graphql.Schema, error) {
 
 		return nil
 	})
+
 	if err != nil {
 		return nil, err
 	}

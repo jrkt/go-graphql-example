@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/gorilla/mux"
-	"github.com/jrkt/go-graphql-example/graphql"
+	"github.com/jrkt/go-graphql-example/advanced/graphql"
 	"log"
 	"net/http"
 )
